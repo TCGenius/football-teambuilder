@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  background-image: url("../styles/img/Card.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.cardInvite {
+  background-image: url("../styles/img/CardInvite.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.cardNew {
+  background-image: url("../styles/img/CardNew.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
