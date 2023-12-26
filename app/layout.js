@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { Roboto } from 'next/font/google'
 import {Providers} from "./providers";
-import { Navigation } from './components/Navigation';
+import { Navigation } from './components/navigation/Navigation';
 
 const font = Roboto({
   weight: ['300', '700'],
@@ -15,14 +15,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="es" className='dark'> 
+      <html lang="es"> 
         <head>
           <title>Furbo</title>
         </head>
-        <body className={`bg-lime-500 ${font.className}`}>
+        <body className={`${font.className}`}>
           <Providers>
           <Navigation />
-            <div className='lg:ml-[19%] bg-blue-950 h-full min-h-screen'>
+            <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen'>
                 {children}
             </div>
           </Providers>

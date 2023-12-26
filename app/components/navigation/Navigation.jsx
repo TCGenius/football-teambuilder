@@ -28,7 +28,7 @@ export function Navigation () {
   
   return (
     <>
-    <header className='bg-lime-600 h-16 border-b border-white'>
+    <header className='bg-green-400 h-16 border-b border-blue-400'>
         <nav className={`flex justify-between h-full items-center px-9`}>
         <button id='hamb-button' className='lg:hidden' onClick={showSideHandler}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
