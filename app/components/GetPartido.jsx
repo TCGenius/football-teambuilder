@@ -22,14 +22,28 @@ if (isLoading) return 'Cargando Equipos...';
       <div id='equipo1' className='bg-red-500 h-max px-2 shadow-md shadow-gray-700 lg:rounded-tr-2xl lg:rounded-br-2xl lg:basis-1/2 basis-full space-y-4 py-4'>
       <h1 className='text-xl text-center uppercase'>Equipo 1</h1>
       {data.equipos.equipo1.map(player => (
-            <ListItem key={player} nombre={player} />
+            <ListItem key={player} nombre={player.nombre} />
           ))}
+      <div className='flex items-center justify-center gap-6'>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.sword} {data.equipos.habilidad1.ataque}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.shield} {data.equipos.habilidad1.defensa}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.footprints} {data.equipos.habilidad1.gambeta}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.football} {data.equipos.habilidad1.pase}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.running} {data.equipos.habilidad1.resistencia}</div>
+      </div>
       </div>
       <div id='equipo2' className='bg-blue-500 h-max px-2 shadow-md shadow-gray-700 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:basis-1/2 basis-full space-y-4 py-4'>
       <h1 className='text-xl text-center uppercase'>Equipo 2</h1>
       {data.equipos.equipo2.map(player => (
-            <ListItem key={player} nombre={player} />
+            <ListItem key={player} nombre={player.nombre} />
           ))}
+        <div className='flex items-center justify-center gap-6'>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.sword} {data.equipos.habilidad2.ataque}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.shield} {data.equipos.habilidad2.defensa}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.footprints} {data.equipos.habilidad2.gambeta}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.football} {data.equipos.habilidad2.pase}</div>
+        <div className='flex items-center justify-center gap-1 text-xl'>{Icons.running} {data.equipos.habilidad2.resistencia}</div>
+      </div>
       </div>
     </div>
   )

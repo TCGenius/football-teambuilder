@@ -8,7 +8,7 @@ export default function CardOnePlayer( { player } ) {
 const [rotate, setRotate] = useState(false)
 
   return(
-    <div className={`w-full lg:w-3/5 max-w-lg flip-card cursor-pointer
+    <div className={`w-full lg:w-3/5 min-h- max-w-lg flip-card cursor-pointer
     ${rotate ? 'rotated' : ''}`}
     onClick={() => setRotate(!rotate)}>
       <div className='flip-card-inner w-full h-full relative text-center '>

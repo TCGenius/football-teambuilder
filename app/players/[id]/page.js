@@ -1,6 +1,7 @@
 import CardOnePlayer from '@/app/components/CardOnePlayer'
 import RouterButton from '@/app/components/navigation/RouterButton'
 import { endpoint } from '@/config/config'
+import Icons from '@/styles/icons'
 
 async function getData(id) {
   const res = await fetch(`${endpoint}/unPlayer/${id}`, {cache: 'no-store'})
@@ -16,11 +17,9 @@ export default async function OnePlayerPage( { params } ) {
   
   return(
 
-    <div className='container flex flex-col justify-center items-center p-6 gap-3'>
+    <div className='container flex flex-col h-full justify-center items-center p-6 gap-3'>
       <div className='w-full flex items-center justify-start'>
-        <RouterButton
-        navigateTo='/players'
-        >
+        <RouterButton>
           Atrás
         </RouterButton>
       </div>

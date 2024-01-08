@@ -5,6 +5,9 @@ export default function CourtList({courts}) {
   
   return(
     <>
+      <h1 className='w-full text-center font-bold text-5xl mb-4 mt-3'>
+        Canchas
+      </h1>
       {courts.map(court => (
         <div key={court.id} className='lg:w-2/5 w-full flex shadow-lg shadow-yellow-800 flex-col items-center gap-4 justify-center bg-white rounded-md p-4'>
           <div className='relative w-full border-b-1 border-gray-400'>
@@ -13,7 +16,7 @@ export default function CourtList({courts}) {
             </div>
             <div className='absolute right-0 top-0'>
               <p className='text-blue-600 font-bold'>
-                {court.tipo}
+                {court.tipo.toString()}
               </p>
             </div>
             </div>

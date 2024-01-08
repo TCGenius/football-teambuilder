@@ -1,7 +1,8 @@
 import '../styles/globals.css'
 import { Roboto } from 'next/font/google'
-import {Providers} from "./providers";
+import { Providers } from "./providers";
 import { Navigation } from './components/navigation/Navigation';
+import { MatchProvider } from './contexts/MatchContext';
 
 const font = Roboto({
   weight: ['300', '700'],
@@ -21,10 +22,12 @@ export default function RootLayout({ children }) {
         </head>
         <body className={`${font.className}`}>
           <Providers>
-          <Navigation />
-            <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen'>
-                {children}
-            </div>
+            <MatchProvider>
+              <Navigation />
+                <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen'>
+                    {children}
+                </div>
+            </MatchProvider>
           </Providers>
         </body>
       </html>

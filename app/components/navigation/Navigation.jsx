@@ -2,6 +2,7 @@
 import NavLabelHijo from './NavLabelHijo'
 import Icons from '@/styles/icons'
 import { useState } from 'react'
+import CourtButton from './CourtButton'
 
 const links = [{
   icon: Icons.home,
@@ -30,19 +31,15 @@ export function Navigation () {
     <>
     <header className='bg-green-400 h-16 border-b border-blue-400'>
         <nav className={`flex justify-between h-full items-center px-9`}>
-        <button id='hamb-button' className='lg:hidden' onClick={showSideHandler}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
+          <button id='hamb-button' className='lg:hidden' onClick={showSideHandler}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
           <div className='flex items-center'>
             <h1>LOGO</h1>
           </div>
-          <button id='profile'>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
-          </button>
+          <CourtButton />
         </nav>
     </header>
     <aside id='sidebar' className={
