@@ -12,13 +12,7 @@ export default function CourtButton(){
     content='Armar partido'
     className=''>
       <Link className='text-4xl gap-1 flex items-center justify-center'
-      href='/partidos/current'>
-      <Chip
-      size='sm'
-      color='warning'
-      variant='solid'>
-        {match.length}
-      </Chip>
+      href='/partido/current'>
         {Icons.court}
       </Link>
     </Tooltip>

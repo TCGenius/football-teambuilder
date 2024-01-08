@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <MatchProvider>
               <Navigation />
-                <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen'>
+                <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen pt-16'>
                     {children}
                 </div>
             </MatchProvider>

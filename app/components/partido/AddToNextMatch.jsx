@@ -1,20 +1,11 @@
 'use client'
 import Icons from '@/styles/icons';
 import { Button, Tooltip } from '@nextui-org/react';
-import { post } from '@/app/functions/fetchs';
-import { endpoint } from '@/config/config';
 import { useMatchContext } from '@/app/contexts/MatchContext';
 
-export default function AddToNextMatch( { suspended, playerId } ) {
-  const { addToNextMatch } = useMatchContext()
-  const body = {
-    id: playerId
-  }
-
-  const route = `${endpoint}/juegaPartido`
-  const postHandler = () => {
-    post(route, body)
-  }
+export default function AddToNextMatch( { suspended, player } ) {
+  const { addToNextMatch, nextMatch, match } = useMatchContext()
+  const isInNextMatch = nextMatch.includes(player)
 
   return(
     <Tooltip 
@@ -26,9 +17,9 @@ export default function AddToNextMatch( { suspended, playerId } ) {
       isIconOnly 
       color='success'
       onClick={
-        () => {addToNextMatch(playerId)}
+        () => {addToNextMatch(player)}
       } 
-      isDisabled = {suspended == 1 ? true : false}
+      isDisabled = {suspended == 1 || isInNextMatch ? true : false}
       className='p-1 text-2xl text-white'>
         {Icons.football}
       </Button>
