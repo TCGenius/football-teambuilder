@@ -17,7 +17,7 @@ export default async function OnePlayerPage( { params } ) {
   
   return(
 
-    <div className='container flex flex-col h-full justify-center items-center p-6 gap-3'>
+    <div className='container flex flex-col h-full justify-center items-center px-6 pb-6 pt-20 gap-3'>
       <div className='w-full flex items-center justify-start'>
         <RouterButton>
           Atrás

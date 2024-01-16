@@ -3,6 +3,7 @@ import NavLabelHijo from './NavLabelHijo'
 import Icons from '@/styles/icons'
 import { useState } from 'react'
 import CourtButton from './CourtButton'
+import Link from 'next/link'
 
 const links = [{
   icon: Icons.home,
@@ -36,9 +37,12 @@ export function Navigation () {
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
-          <div className='flex items-center'>
-            <h1>LOGO</h1>
-          </div>
+          <Link 
+          className='flex items-center justify-center gap-2 group'
+          href={'/'}>
+            <h1 className='transition-all text-3xl group-hover:text-blue-950 group-hover:rotate-180'>{Icons.football}</h1>
+            <h1 className='transition-all group-hover:text-blue-950 text-2xl font-bold'>Fulbuilder</h1>
+          </Link>
           <CourtButton />
         </nav>
     </header>

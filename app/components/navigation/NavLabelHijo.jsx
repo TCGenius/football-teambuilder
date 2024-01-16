@@ -26,8 +26,8 @@ export default function NavLabelHijo({ name, ruta, icono, nivel }) {
     ${routerParent == rutaParent || nivel == 0 ? 'flex' : 'hidden' /*Con esto, escondo lo que no es nivel 0*/}
     ${nivel == 0 ? 'ml-0' : `ml-${4*nivel} bg-gradient-to-r from-gray-100 to-white` /* Con esto doy tabulación a los niveles inferiores. El nivel se saca del array de las opciones que enviamos.*/} 
     ${router == ruta ? 
-    'text-white text-lg first:bg-gradient-to-r first:from-lime-800 first:to-lime-400 first:rounded-lg group/active' : 
-    'text-black first:hover:ring-2 first:hover:ring-lime-600 first:rounded-lg group/inactive' 
+    'text-white text-lg first:bg-green-700 first:rounded-lg group/active' : 
+    'text-black first:hover:ring-2 first:hover:ring-green-800 first:rounded-lg group/inactive' 
     /* Estilos si nos encontramos en esta ruta*/}
     `}>
       <div className={`flex gap-2 w-full px-4 py-2 items-center`}>

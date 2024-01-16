@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="es"> 
+      <html lang="es" > 
         <head>
           <title>Furbo</title>
         </head>
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <MatchProvider>
               <Navigation />
-                <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen pt-16'>
+                <div className='lg:ml-[19%] bg-yellow-400 h-full min-h-screen'>
                     {children}
                 </div>
             </MatchProvider>

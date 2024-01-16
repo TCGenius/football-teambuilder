@@ -4,12 +4,13 @@ import { useMatchContext } from '@/app/contexts/MatchContext'
 import AddedPlayer from './AddedPlayer'
 import { ScrollShadow } from '@nextui-org/react'
 
-export default function NextMatchPlayers( { method, color, juegan } ) {
-  const {nextMatch, match} = useMatchContext()
+export default function NextMatchPlayers( { method, juegan } ) {
+  const {nextMatch} = useMatchContext()
 
   const players = method != 1 ? nextMatch : juegan
   return(
-    <ScrollShadow className={`flex h-52 flex-wrap items-start gap-2 w-full justify-start p-4 bg-${color}-500 shadow-inner shadow-${color}-800`}>
+    <ScrollShadow className={`flex h-52 flex-wrap shadow-inner items-start gap-2 w-full justify-start p-4 
+    ${method == 1 ? 'bg-green-500 shadow-green-800' : 'bg-blue-500 shadow-blue-800'}`}>
       {players.map( (player, index) => (
         <AddedPlayer 
         key={player.id}

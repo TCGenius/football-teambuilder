@@ -20,7 +20,7 @@ export default function AddedPlayer ( { method, nombre, index, id } ) {
 
   return(
     <Chip
-    className='flex gap-2 bg-white'
+    className={`flex gap-2 bg-white shadow-lg ${method == 1 ? 'shadow-green-800' : 'shadow-blue-800'}`}
     size='lg'
     onClose={method == 1 ? removeFromMatch: () => removeFromNextMatch(index)}
     variant='flat'>

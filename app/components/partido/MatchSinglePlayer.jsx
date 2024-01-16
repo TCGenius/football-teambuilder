@@ -1,17 +1,19 @@
+'use client'
 import Icons from '@/styles/icons';
 import { Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 import { PlayerCard } from '../PlayerCard';
 import AddToNextMatch from './AddToNextMatch';
 
-export default function MatchSinglePlayer( {player} ) {
+export default function MatchSinglePlayer( {player, searchStateHandler} ) {
+
   return(
     <div
-    className='flex w-28 h-36 flex-col items-center justify-between shadow-md bg-white
+    className='flex w-24 h-36 flex-col items-center justify-between shadow-md bg-white
     rounded-md p-4 hover:bg-gray-200'>
       <Popover
       backdrop='blur'>
         <PopoverTrigger>
-            <div className='text-black text-xl hover:font-bold cursor-pointer'>
+            <div className='text-black text-md hover:font-bold cursor-pointer'>
               {player.nombre}
             </div>
         </PopoverTrigger>
@@ -27,7 +29,8 @@ export default function MatchSinglePlayer( {player} ) {
 
         <AddToNextMatch 
         suspended={player.suspension}
-        player={player}/>
+        player={player}
+        searchStateHandler={searchStateHandler}/>
 
     </div>
   )
