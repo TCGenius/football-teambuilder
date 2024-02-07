@@ -19,8 +19,7 @@ export default function PlayersList( {data} ) {
         placeholder='Busca un jugador...'
         onChange={(e) => setPlayerSearch(e.target.value)}/>
       </div>
-      <ScrollShadow className='flex flex-wrap gap-6 justify-center max-w-screen mx-auto p-4 overflow-scroll h-full'
-      hideScrollBar> 
+      <ScrollShadow className='flex flex-wrap gap-6 justify-center max-w-screen mx-auto p-4 overflow-y-scroll h-full'> 
         {filteredPlayers.map(player => (
           <PlayerCard key={player.id}
           player={player} />

@@ -41,8 +41,7 @@ export default function MatchPlayersList( {data} ) {
           onChange={(e) => setPlayerSearch(e.target.value)}/>
         </div> 
         <ScrollShadow 
-        hideScrollBar
-        className='flex flex-wrap gap-4 overflow-scroll w-full h-full justify-center items-start p-2'> 
+        className='flex flex-wrap gap-4 overflow-y-scroll w-full h-full justify-center items-start p-2'> 
           {filteredPlayers.map(player => (
             <MatchSinglePlayer 
             key={player.id}

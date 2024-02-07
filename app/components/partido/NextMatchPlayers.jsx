@@ -9,7 +9,7 @@ export default function NextMatchPlayers( { method, juegan } ) {
 
   const players = method != 1 ? nextMatch : juegan
   return(
-    <ScrollShadow className={`flex h-52 flex-wrap shadow-inner items-start gap-2 w-full justify-start p-4 
+    <div className={`flex h-52 flex-wrap shadow-inner overflow-y-scroll rounded-tr-md rounded-br-md items-start gap-2 w-full justify-start p-4 
     ${method == 1 ? 'bg-green-500 shadow-green-800' : 'bg-blue-500 shadow-blue-800'}`}>
       {players.map( (player, index) => (
         <AddedPlayer 
@@ -20,6 +20,6 @@ export default function NextMatchPlayers( { method, juegan } ) {
         id={player.id}
             />
       ))}
-    </ScrollShadow>
+    </div>
   )
 }
